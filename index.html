@@ -35,42 +35,31 @@
       <section id="stay">
         <h2>Find the perfect vacation rental</h2>
         <!-- Create a form here -->
-        <form>
-          <fieldset>
-            <div class="item item-double">
-              <label for="location">Location:</label>
-              <input
-                id="name"
-                type="text"
-                name="location"
-                placeholder="Search destination"
-                />
-            </div>
-            <div class="item item-double">
-              <label for="arrive">Arrive:</label>
-              <input
-                id="arrive"
-                type="date"
-            </div>
-            <div class="item item-double">
-              <label for="depart">Depart:</label>
-              <input
-                id="depart"
-                type="date"
-            </div>
-            <div class="item item-double">
-              <label for="type">Type:</label>
-              <select name="type" id="type" size="1">
-                <option value="apartment">Apartment</option>
-                <option value="barn">Barn</option>
-                <option value="castle">Castle</option>
-                <option value="houseboat">Houseboat</option>
-                <option value="tiny house">Tiny House</option>
-                <option value="yacht">Yacht</option>
-                <option value="yurt">Yurt</option>
-              </select>
-            </div>
-            <div>
+        <form class="group">
+          <!--Location-->
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input id="location" type="text" placeholder="Search destination"/>
+          </div>
+          <!--Arrive-->
+          <div class="form-group">
+            <label for="arrive">Arrive</label>
+            <input id="arrive" type="date" />
+          </div>
+          <!--Depart-->
+          <div class="form-group">
+            <label for="depart">Depart</label>
+            <input id="depart" type="date" />
+          </div>
+          <!--Type-->
+          <div class="form-group">
+            <label for="type">Type</label>
+            <select id="type" size="1">
+              <option value="apartment">Apartment</option>
+              <option value="house">House</option>
+              <option value="room">Room</option>
+            </select>
+          </div>
               <button type="submit">Search</button>
             </div>
           </fieldset>

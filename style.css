@@ -7,7 +7,7 @@ body {
 h2 {
   font-size: 26px;
   font-weight: 400;
-  margin: 0 10px 10px 10px;
+  margin: 0 1% 1% 1%;
   text-align: center;
 }
 
@@ -22,7 +22,7 @@ p {
 }
 
 section {
-  padding: 20px;
+  padding: 4%;
 }
 
 section.alternate-background {
@@ -43,10 +43,15 @@ main img {
 
 .item {
   flex: 1;
-  margin: 10px;
+  margin: 2%;
+}
+
+.item > img {
+  width: 100%;
 }
 
 .item-double {
+  padding: 1%;
   flex: 2;
 }
 
@@ -54,23 +59,15 @@ main img {
 
 header {
   background-color: #ff385c;
-  padding: 20px 20px 0 20px;
+  padding: 2% 2% 0 2%;
   text-align: center;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 60px;
   color: #fff;
-}
-
-header nav {
-  display: flex;
-  justify-content: center;
-}
-
-header nav ul {
-  display: flex;
+  text-align: center;
 }
 
 header nav ul li {
@@ -88,20 +85,35 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
+#menu {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+
 /* -------  Search Form ------- */
+.form-group {
+  display: flex;
+  flex: 1;
+}
+
 form {
   border: 2px solid #ff385c;
-  padding: 10px;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
 }
 
 form label {
   font-weight: bold;
+  flex: 1;
+  margin: 10px;
 }
 
 form select,
 form input {
-  margin-bottom: 20px;
-  width: 180px;
+  margin: 10px 10px 20px 10px;
+  flex: 2;
 }
 
 form button {
@@ -111,6 +123,7 @@ form button {
   font-size: 24px;
   padding: 15px;
   width: 100%;
+  flex: 1;
 }
 
 /* -------  Footer ------- */
@@ -126,49 +139,47 @@ footer p {
 }
 
 /* -------  Media Query ------- */
-
-@media all and (min-width: 480px) {
+@media all and (min-width: 768px) {
   header {
     display: flex;
     justify-content: space-between;
-    padding: 0;
+  }
+
+  nav {
+    padding-top: 10px;
+  }
+
+  #menu {
+    flex-wrap: wrap;
+    line-height: 1.4;
+  }
+
+  form {
+    flex-direction: row;
+    justify-content: center;
   }
 
   .logo {
-    margin: 14px 0 14px 20px;
-    padding-top: 0;
-    font-size: 42px;
+    font-size: 72px;
   }
 
-  form select, from input {
-    margin-bottom: 20px;
-    width: 180px;
-  }
-
-  header nav ul {
-    align-items: center;
+  .form-group {
+    flex-direction: column;
+    min-width: 0;
   }
 
   .group {
     flex-direction: row;
-    align-items: center;
   }
 
-  form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  form div {
+  .idea {
     flex-direction: column;
   }
 
-  form button {
-    flex: 1;
+  .host-group, #host .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  form select, form input {
-    margin-bottom: 0px;
-  }
 }
